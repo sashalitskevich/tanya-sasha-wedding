@@ -37,7 +37,7 @@ p, h2, h3 { margin: 0; }
 .faq__item p { font-size: 20px; line-height: 24px; letter-spacing: -.4px; font-weight: 400; }
 .faq__line--last { position: relative; display:block; top: 0; }
 .rsvp { top: 3376px; height: 1080px; background: #fcc3ce; }
-.rsvp__circles { position: absolute; left: -41px; top: -97px; width: 2006px; height: 1259px; }
+.rsvp__circles { position: absolute; left: -41px; top: -33px; width: 2006px; height: 1195px; }
 .rsvp__divider { position: absolute; left: 915px; top: 95px; width: 2px; height: 890px; object-fit: fill; }
 .rsvp__title { position: absolute; left: 52px; top: 331px; width: 863px; height: 321px; display: flex; flex-direction: column; justify-content: center; font-size: 120px; line-height: 98px; letter-spacing: -2.4px; font-weight: 300; white-space: pre-wrap; }
 .rsvp__title-line { display: block; height: 98px; }
@@ -48,7 +48,7 @@ p, h2, h3 { margin: 0; }
 .rsvp__description { position: absolute; left: 136px; top: 634.23px; width: 665px; font-size: 20px; line-height: 24px; letter-spacing: -.4px; font-weight: 400; }
 .update { top: 4456px; height: 1080px; background: white; }
 .update__circles { position: absolute; inset: 0; width: 1920px; height: 1080px; display: block; }
-.update p { position: absolute; left: 142px; top: 342px; width: 1636px; color: #fcc3ce; text-align: center; font-size: 120px; line-height: 98px; letter-spacing: -2.4px; font-weight: 300; }
+.update p { position: absolute; left: 142px; top: 540px; transform: translateY(-50%); width: 1636px; color: #fcc3ce; text-align: center; font-size: 120px; line-height: 98px; letter-spacing: -2.4px; font-weight: 300; }
 .update p span { color: #fd7a00; }
 .goodbye { top: 5536px; height: 1080px; background: #fcc3ce; }
 .goodbye__circles { position: absolute; left: -43px; top: -64px; width: 2031px; height: 1198px; display: block; }
@@ -286,3 +286,25 @@ p, h2, h3 { margin: 0; }
 .m-update p { position:absolute; left:60px; top:540px; width:960px; color:#fcc3ce; text-align:center; font-size:110px; line-height:98px; letter-spacing:-2.2px; font-weight:300; }
 .m-update p span { color:#fd7a00; }
 .m-goodbye { top:9820px; height:1920px; background:#fcc3ce; }
+
+/* Updated mobile final-screen circle composition from Figma node 72:806. */
+.m-goodbye__dot {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+.m-goodbye__dot--orange { background: #fd7a00; }
+.m-goodbye__dot--white { background: #fbf6f3; }
+.m-goodbye > p {
+  position: absolute;
+  right: 51px;
+  bottom: 28.5px;
+  margin: 0;
+  color: #fd7a00;
+  font-size: 110px;
+  line-height: 98px;
+  letter-spacing: -2.2px;
+  font-weight: 300;
+  white-space: nowrap;
+}

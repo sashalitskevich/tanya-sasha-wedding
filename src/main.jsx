@@ -3,29 +3,35 @@ import { createRoot } from 'react-dom/client';
 import './styles.css';
 
 const A = {
-  mainPhoto: 'https://www.figma.com/api/mcp/asset/1c1ebe51-b173-47da-b906-d4dbf98b0ba7',
-  rsvpCircles: 'https://www.figma.com/api/mcp/asset/64cf1969-dcea-422e-83fb-658929410cb8',
+  mainPhoto: 'https://www.figma.com/api/mcp/asset/6ca958a0-a5a0-4005-b7d0-ba6a8c51c1fa',
+  rsvpCircles: 'https://www.figma.com/api/mcp/asset/7b55d2e3-32a9-4dc7-95d1-4ab8fe152a7a',
   dividerPink: 'https://www.figma.com/api/mcp/asset/c1e2cfb3-7d52-43df-8d88-43b32416654b',
-  faqCircles: 'https://www.figma.com/api/mcp/asset/d0061e85-1e72-477a-b810-34c9edf6ea83',
+  faqCircles: 'https://www.figma.com/api/mcp/asset/37e340dd-f6fe-4d76-a9b5-57ea4ddb9d88',
   dividerWhite: 'https://www.figma.com/api/mcp/asset/60795981-3770-45b4-95ea-ed24550188e6',
-  dateDots: 'https://www.figma.com/api/mcp/asset/bc3b270b-0206-4afd-89ab-592ed41ac64e',
+  dateDots: 'https://www.figma.com/api/mcp/asset/5259e64b-deb3-45eb-a88e-38e06ec6256f',
   dateDecor: 'https://www.figma.com/api/mcp/asset/a4b28985-ac2e-4ab3-a2bf-5cb9d05173c7',
-  heroCircles: 'https://www.figma.com/api/mcp/asset/72e6d741-1314-44ea-9698-503bdb303123',
-  seeYouCircles: 'https://www.figma.com/api/mcp/asset/26c3c25a-21b0-4dad-882a-4445e070dd50',
-  updateCircles: 'https://www.figma.com/api/mcp/asset/f3c743dd-d109-4b14-aa99-3648870d42c7',
+  heroCircles: 'https://www.figma.com/api/mcp/asset/bda6f936-8bbe-48ac-b92d-72c912ce9e6c',
+  seeYouCircles: 'https://www.figma.com/api/mcp/asset/2f799048-818f-4aeb-907c-6a78b093f229',
+  updateCircles: 'https://www.figma.com/api/mcp/asset/acfd39e1-0ea8-44d4-9daa-2eae48534ff0',
 };
 
 
 const M = {
-  photo: 'https://www.figma.com/api/mcp/asset/21cd1a9b-fb71-435c-b407-980663043b0a',
-  heroCircles: 'https://www.figma.com/api/mcp/asset/e21e8f85-39f2-45e2-940a-a14c69624004',
-  dateCircles: 'https://www.figma.com/api/mcp/asset/daced668-bbbf-42ca-a0be-aec4281fdd65',
-  faqCircles: 'https://www.figma.com/api/mcp/asset/d0db7c05-507a-4fb6-87fb-76548aa31527',
+  photo: 'https://www.figma.com/api/mcp/asset/c11f7704-71bb-48ff-bd92-b06bb9483440',
+  heroCircles: 'https://www.figma.com/api/mcp/asset/57d8899c-2e75-4191-ad23-a5d7a17ac585',
+  dateCircles: 'https://www.figma.com/api/mcp/asset/93bd65bc-90d6-4b4c-95b2-dd05c818c8fa',
+  faqCircles: 'https://www.figma.com/api/mcp/asset/275b620c-d619-44d5-a651-0414803aa1cc',
   divider: 'https://www.figma.com/api/mcp/asset/ac5093bf-47c7-440a-a9a4-b54b50159191',
-  rsvpCircles: 'https://www.figma.com/api/mcp/asset/17e761a7-4950-4bee-a0a0-d3d0b7945d32',
-  seeYou: 'https://www.figma.com/api/mcp/asset/99a6073f-4a4a-42b4-8224-610d2a908e16',
-  updateCircles: 'https://www.figma.com/api/mcp/asset/98ffe9db-2504-4a25-8702-b1fc918857d6',
+  rsvpCircles: 'https://www.figma.com/api/mcp/asset/20865bda-924c-4444-9fff-00ce3b75c9cd',
+  seeYou: 'https://www.figma.com/api/mcp/asset/3a9c81f3-a5cb-43cb-9758-3847edf9d935',
+  updateCircles: 'https://www.figma.com/api/mcp/asset/df833fd2-893c-44f9-8b86-a92f2c775ae2',
 };
+
+
+function typography(text) {
+  if (typeof text !== 'string') return text;
+  return text.replace(/(^|[\s«„“(—-])([вксуоиа]) (?=\S)/giu, '$1$2\u00A0');
+}
 
 const RSVP_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyLgxGn-U4pD0E0J3oZhq1poUC5DTACj1h_J5Y3ipPn2Cl6JpdnwtyO0exfFw0FgDahUw/exec';
 
@@ -35,6 +41,21 @@ const faq = [
   ['Как добраться до места?', 'Мы организуем трансфер из центра Белграда до ранчо. А вечером с комфортом вернём вас обратно. Если вам не хочется не зависеть от трансфера, без проблем можно приехать на своей машине. На месте будет удобная парковка.'],
   ['Нужно ли подтверждать присутствие?', 'Да, так мы точнее сможем рассчитать количество посадочных мест, еды и напитков, чтобы всем всего хватило. Пожалуйста, отметьте своё решение в форме ниже не позже чем за 1,5 месяца до события.'],
   ['А если остались вопросы?', 'Срочные вопросы пишите нам в телеграм. А ближе к мероприятию мы сделаем чат с нашим свадебным организатором, Аней. Она поможет ответить на все оставшиеся.'],
+];
+
+
+const mobileGoodbyeDots = [
+  ['orange', 464, 704.5], ['white', 536, 763.5], ['orange', 282, 591.5], ['orange', 131, 648.5],
+  ['orange', 291, 856.5], ['orange', 93, 856.5], ['white', 145, 763.5], ['white', 579, 1153.5],
+  ['white', 405, 680.5], ['white', 245, 616.5], ['orange', 270, 1065.5], ['white', 359, 856.5],
+  ['white', 206, 872.5], ['white', 344, 1041.5], ['orange', 259, 960.5], ['orange', 501, 1221.5],
+  ['orange', 419, 1153.5], ['orange', 373, 968.5], ['orange', 559, 920.5], ['white', 472, 1056.5],
+  ['orange', 592, 1096.5], ['orange', 699, 1000.5], ['white', 672, 655.5], ['white', 643, 922.5],
+  ['orange', 472, 896.5], ['orange', 233, 768.5], ['orange', 282, 680.5], ['orange', 565, 698.5],
+  ['orange', 419, 640.5], ['white', 794, 1150.5], ['orange', 739, 808.5], ['white', 783, 796.5],
+  ['orange', 736, 570.5], ['orange', 826, 655.5], ['orange', 824, 840.5], ['orange', 800, 936.5],
+  ['orange', 623, 840.5], ['orange', 410, 776.5], ['orange', 419, 1064.5], ['orange', 611, 1000.5],
+  ['orange', 336, 326.5],
 ];
 
 const endDots = [
@@ -150,8 +171,8 @@ function App() {
               {faq.map(([q,a]) => (
                 <article className="m-faq__item" key={q}>
                   <img src={M.divider} alt="" />
-                  <h3>{q}</h3>
-                  <p>{a}</p>
+                  <h3>{typography(q)}</h3>
+                  <p>{typography(a)}</p>
                 </article>
               ))}
               <img src={M.divider} alt="" className="m-faq__last" />
@@ -161,7 +182,7 @@ function App() {
           <section className="m-section m-rsvp">
             <img className="m-full" src={M.rsvpCircles} alt="" />
             <h2>Вы скажете<br />нам <b>да</b>?</h2>
-            <p className="m-rsvp__description">Заполните, пожалуйста, форму, чтобы мы понимали, сколько нам ожидать гостей.<br />Оставьте свой ник в tg, чтобы потом мы собрали всех в одну группу.</p>
+            <p className="m-rsvp__description">{typography('Заполните, пожалуйста, форму, чтобы мы понимали, сколько нам ожидать гостей.')}<br />{typography('Оставьте свой ник в tg, чтобы потом мы собрали всех в одну группу.')}</p>
             <div className="m-rsvp__form-shell">
               {rsvpStatus === 'success' ? (
                 <div className="rsvp__success" aria-live="polite">
@@ -185,10 +206,16 @@ function App() {
 
           <section className="m-section m-update">
             <img className="m-full" src={M.updateCircles} alt="" />
-            <p>Дадим знать, <span>когда здесь появится больше полезной информации</span>. Это будет <span>скоро</span>, возвращайтесь!</p>
+            <p>{typography('Дадим знать, ')}<span>{typography('когда здесь появится больше полезной информации')}</span>. Это будет <span>скоро</span>, возвращайтесь!</p>
           </section>
 
-          <section className="m-section m-goodbye"><img className="m-full" src={M.seeYou} alt="Увидимся!" /></section>
+          <section className="m-section m-goodbye">
+            <img className="m-full" src={M.seeYou} alt="" />
+            {mobileGoodbyeDots.map(([color, left, top], index) => (
+              <span key={`${color}-${left}-${top}-${index}`} className={`m-goodbye__dot m-goodbye__dot--${color}`} style={{ left, top }} />
+            ))}
+            <p>Увидимся!</p>
+          </section>
         </div>
       </main>
     );
@@ -224,8 +251,8 @@ function App() {
             {faq.map(([q,a]) => (
               <article className="faq__item" key={q}>
                 <img src={A.dividerWhite} alt="" className="faq__line" />
-                <h3>{q}</h3>
-                <p>{a}</p>
+                <h3>{typography(q)}</h3>
+                <p>{typography(a)}</p>
               </article>
             ))}
             <img src={A.dividerWhite} alt="" className="faq__line faq__line--last" />
@@ -245,7 +272,7 @@ function App() {
               <span className="rsvp__second-indent">&nbsp;&nbsp;&nbsp;&nbsp;</span>нам <b>да</b>?
             </span>
           </h2>
-          <p className="rsvp__description">Заполните, пожалуйста, форму, чтобы мы понимали,<br />сколько нам ожидать гостей. Оставьте свой ник в tg,<br />чтобы потом мы собрали всех в одну группу.</p>
+          <p className="rsvp__description">{typography('Заполните, пожалуйста, форму, чтобы мы понимали,')}<br />{typography('сколько нам ожидать гостей. Оставьте свой ник в tg,')}<br />{typography('чтобы потом мы собрали всех в одну группу.')}</p>
 
           <div className="rsvp__form-shell">
             {rsvpStatus === 'success' ? (
@@ -290,7 +317,7 @@ function App() {
 
         <section className="section update">
           <img className="update__circles" src={A.updateCircles} alt="" />
-          <p>Дадим знать, когда <span>здесь появится больше полезной информации</span>. Это будет <span>скоро</span>, возвращайтесь!</p>
+          <p>{typography('Дадим знать, когда ')}<span>{typography('здесь появится больше полезной информации')}</span>. Это будет <span>скоро</span>, возвращайтесь!</p>
         </section>
 
         <section className="section goodbye">
