@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,300&display=swap');
+
+:root { font-family: 'Roboto Mono', monospace; color: #fbf6f3; background: #fbf6f3; font-synthesis: none; }
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; min-width: 320px; min-height: 100%; }
+body { overflow-x: hidden; }
+p, h2, h3 { margin: 0; }
+.viewport { width: 100%; overflow: hidden; position: relative; }
+.canvas { position: absolute; width: 1920px; height: 6616px; transform-origin: top left; left: 0; top: 0; }
+.section { position: absolute; left: 0; width: 1920px; overflow: hidden; }
+.shade { position: absolute; inset: 0; background: rgba(0,0,0,.3); }
+.hero { top: 0; height: 1080px; background: #fcc3ce; }
+.hero__photo { position: absolute; inset: 0; width: 1920px; height: 1080px; display: block; object-fit: fill; }
+.hero__circles { position: absolute; left: -30px; top: -64px; width: 2010px; height: 1236px; }
+.hero__text { position: absolute; left: 74px; top: 36px; width: 1802px; height: 993px; overflow: hidden; font-size: 120px; line-height: 98px; letter-spacing: -2.4px; font-weight: 300; white-space: nowrap; }
+.hero__text em { font-style: italic; font-weight: 300; }
+.hero__hello, .hero__marry, .hero__invite { position: absolute; }
+.hero__hello { left: -9px; top: 40px; }
+.hero__marry { left: 1279px; top: 368px; }
+.hero__invite { left: 303px; top: 759px; }
+.date { top: 1080px; height: 1080px; background: #fcc3ce; }
+.date__photo { position: absolute; left: 0; top: -0.34px; width: 1920px; height: 1080px; display: block; object-fit: fill; }
+.date__dots { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+.date__when, .date__where { position: absolute; font-size: 120px; line-height: 98px; letter-spacing: -2.4px; font-weight: 300; white-space: nowrap; }
+.date__when { left: 56px; top: 72px; color: #fbf6f3; }
+.date__when span { color: #fd7a00; }
+.date__where { left: 542px; top: 789px; }
+.date__where span { color: #fd7a00; }
+.date__decor { position: absolute; left: 1709px; top: 177.78px; width: 127.961px; height: 105.218px; }
+.faq { top: 2160px; height: 1216px; background: #fd7a00; }
+.faq__circles { position: absolute; left: -33px; top: -99px; width: 1970px; height: 1410px; }
+.faq__title { position: absolute; left: 50px; top: 82px; font-size: 120px; line-height: 98px; letter-spacing: -2.4px; font-weight: 300; }
+.faq__list { position: absolute; left: 362px; top: 82px; width: 1196px; }
+.faq__item { position: relative; padding-top: 36px; padding-bottom: 34px; }
+.faq__line { position: absolute; left: 0; top: 0; width: 1196px; height: 2px; object-fit: fill; }
+.faq__item h3 { font-size: 52px; line-height: 54px; letter-spacing: -1.04px; font-weight: 400; margin-bottom: 24px; }
+.faq__item p { font-size: 20px; line-height: 24px; letter-spacing: -.4px; font-weight: 400; }
+.faq__line--last { position: relative; display:block; top: 0; }
+.rsvp { top: 3376px; height: 1080px; background: #fcc3ce; }
+.rsvp__circles { position: absolute; left: -41px; top: -97px; width: 2006px; height: 1259px; }
+.rsvp__divider { position: absolute; left: 915px; top: 95px; width: 2px; height: 890px; object-fit: fill; }
+.rsvp__title { position: absolute; left: 52px; top: 331px; width: 722px; height: 321px; display: flex; flex-direction: column; justify-content: center; font-size: 120px; line-height: 98px; letter-spacing: -2.4px; font-weight: 300; white-space: nowrap; }
+.rsvp__title span { display: block; }
+.rsvp__line2 { margin-left: 72px; }
+.rsvp__line2 b { color: #fd7a00; font-weight: 300; }
+.rsvp__description { position: absolute; left: 136px; top: 634.23px; width: 665px; font-size: 20px; line-height: 24px; letter-spacing: -.4px; font-weight: 400; }
+.update { top: 4456px; height: 1080px; background: white; }
+.update__circles { position: absolute; inset: 0; width: 1920px; height: 1080px; display: block; }
+.update p { position: absolute; left: 142px; top: 342px; width: 1636px; color: #fcc3ce; text-align: center; font-size: 120px; line-height: 98px; letter-spacing: -2.4px; font-weight: 300; }
+.update p span { color: #fd7a00; }
+.goodbye { top: 5536px; height: 1080px; background: #fcc3ce; }
+.goodbye__circles { position: absolute; left: -43px; top: -64px; width: 2031px; height: 1198px; display: block; }
+.goodbye p { position: absolute; left: 1266px; top: 900px; color: #fd7a00; font-size: 120px; line-height: 98px; letter-spacing: -2.4px; font-weight: 300; white-space: nowrap; }
+.dot { position: absolute; width: 128px; height: 128px; border-radius: 50%; }
+.dot--pink { background: #fcc3ce; }
+.dot--white { background: #fbf6f3; }
+.dot--orange { background: #fd7a00; }
+
