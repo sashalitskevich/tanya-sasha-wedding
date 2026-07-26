@@ -17,3 +17,6 @@ npm run dev
 Графические ассеты сейчас подключены по временным ссылкам Figma. Они работают ограниченное время. Перед публикацией нужно скачать их локально в `src/assets` и заменить URL в `src/main.jsx`.
 
 Шрифт подключён через Google Fonts: Roboto Mono Light, Light Italic и Regular.
+
+## RSVP form
+The form in the right half of the RSVP section sends Name, Telegram username and attendance (Да/Нет) to the connected Google Apps Script endpoint.

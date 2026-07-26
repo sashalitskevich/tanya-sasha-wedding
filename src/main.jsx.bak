@@ -4,7 +4,7 @@ import './styles.css';
 
 const A = {
   mainPhoto: 'https://www.figma.com/api/mcp/asset/1c1ebe51-b173-47da-b906-d4dbf98b0ba7',
-  rsvpCircles: 'https://www.figma.com/api/mcp/asset/64cf1969-dcea-422e-83fb-658929410cb8',
+  rsvpCircles: 'https://www.figma.com/api/mcp/asset/33c885b4-5d81-4cc7-aace-8d9bbefb0575',
   dividerPink: 'https://www.figma.com/api/mcp/asset/c1e2cfb3-7d52-43df-8d88-43b32416654b',
   faqCircles: 'https://www.figma.com/api/mcp/asset/d0061e85-1e72-477a-b810-34c9edf6ea83',
   dividerWhite: 'https://www.figma.com/api/mcp/asset/60795981-3770-45b4-95ea-ed24550188e6',
@@ -13,18 +13,6 @@ const A = {
   heroCircles: 'https://www.figma.com/api/mcp/asset/72e6d741-1314-44ea-9698-503bdb303123',
   seeYouCircles: 'https://www.figma.com/api/mcp/asset/26c3c25a-21b0-4dad-882a-4445e070dd50',
   updateCircles: 'https://www.figma.com/api/mcp/asset/f3c743dd-d109-4b14-aa99-3648870d42c7',
-};
-
-
-const M = {
-  photo: 'https://www.figma.com/api/mcp/asset/21cd1a9b-fb71-435c-b407-980663043b0a',
-  heroCircles: 'https://www.figma.com/api/mcp/asset/e21e8f85-39f2-45e2-940a-a14c69624004',
-  dateCircles: 'https://www.figma.com/api/mcp/asset/daced668-bbbf-42ca-a0be-aec4281fdd65',
-  faqCircles: 'https://www.figma.com/api/mcp/asset/d0db7c05-507a-4fb6-87fb-76548aa31527',
-  divider: 'https://www.figma.com/api/mcp/asset/ac5093bf-47c7-440a-a9a4-b54b50159191',
-  rsvpCircles: 'https://www.figma.com/api/mcp/asset/17e761a7-4950-4bee-a0a0-d3d0b7945d32',
-  seeYou: 'https://www.figma.com/api/mcp/asset/99a6073f-4a4a-42b4-8224-610d2a908e16',
-  updateCircles: 'https://www.figma.com/api/mcp/asset/98ffe9db-2504-4a25-8702-b1fc918857d6',
 };
 
 const RSVP_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyLgxGn-U4pD0E0J3oZhq1poUC5DTACj1h_J5Y3ipPn2Cl6JpdnwtyO0exfFw0FgDahUw/exec';
@@ -54,17 +42,12 @@ const endDots = [
 function App() {
   const host = useRef(null);
   const [scale, setScale] = useState(1);
-  const [isMobile, setIsMobile] = useState(false);
   const [rsvpStatus, setRsvpStatus] = useState('idle');
   const [rsvpError, setRsvpError] = useState('');
   const [submittedAttendance, setSubmittedAttendance] = useState('');
 
   useEffect(() => {
-    const update = () => {
-      const mobile = window.innerWidth <= 767;
-      setIsMobile(mobile);
-      setScale(window.innerWidth / (mobile ? 1080 : 1920));
-    };
+    const update = () => setScale(window.innerWidth / 1920);
     update();
     window.addEventListener('resize', update);
     return () => window.removeEventListener('resize', update);
@@ -118,80 +101,6 @@ function App() {
     setRsvpStatus('idle');
     setRsvpError('');
     setSubmittedAttendance('');
-  }
-
-  if (isMobile) {
-    return (
-      <main className="viewport" ref={host} style={{ height: 11740 * scale }}>
-        <div className="mobile-canvas" style={{ transform: `scale(${scale})` }}>
-          <section className="m-section m-hero">
-            <img className="m-photo" src={M.photo} alt="Саша и Таня" />
-            <div className="shade" />
-            <img className="m-full" src={M.heroCircles} alt="" />
-            <div className="m-hero__text">
-              <div className="m-hero__hello">Привет,<br /><span>   друзья!</span></div>
-              <div className="m-hero__marry"><span>    <em>Мы</em></span><br /><em>женимся!</em></div>
-              <div className="m-hero__invite">И зовём <em>вас<br />            это</em><br /><em> отпраздновать</em></div>
-            </div>
-          </section>
-
-          <section className="m-section m-date">
-            <img className="m-photo" src={M.photo} alt="" />
-            <div className="shade" />
-            <img className="m-full" src={M.dateCircles} alt="" />
-            <div className="m-date__when">Ждём всех<br /><span>     24 октября<br />  2026</span><br /><span>      в 15:00</span></div>
-            <div className="m-date__where">В <span>Белграде</span>,<br />       Сербия</div>
-          </section>
-
-          <section className="m-section m-faq">
-            <img className="m-full" src={M.faqCircles} alt="" />
-            <h2>FAQ</h2>
-            <div className="m-faq__list">
-              {faq.map(([q,a]) => (
-                <article className="m-faq__item" key={q}>
-                  <img src={M.divider} alt="" />
-                  <h3>{q}</h3>
-                  <p>{a}</p>
-                </article>
-              ))}
-              <img src={M.divider} alt="" className="m-faq__last" />
-            </div>
-          </section>
-
-          <section className="m-section m-rsvp">
-            <img className="m-full" src={M.rsvpCircles} alt="" />
-            <h2>Вы скажете<br />нам <b>да</b>?</h2>
-            <p className="m-rsvp__description">Заполните, пожалуйста, форму, чтобы мы понимали, сколько нам ожидать гостей.<br />Оставьте свой ник в tg, чтобы потом мы собрали всех в одну группу.</p>
-            <div className="m-rsvp__form-shell">
-              {rsvpStatus === 'success' ? (
-                <div className="rsvp__success" aria-live="polite">
-                  <p className="rsvp__success-title">Спасибо!</p>
-                  <p className="rsvp__success-text">{submittedAttendance === 'Да' ? 'Мы получили ваш ответ и будем очень рады видеть вас на свадьбе.' : 'Спасибо, что сообщили. Нам очень жаль, что вы не сможете быть с нами.'}</p>
-                  <button className="rsvp__change" type="button" onClick={handleChangeAnswer}>Изменить ответ</button>
-                </div>
-              ) : (
-                <form className="rsvp__form" onSubmit={handleRsvpSubmit} noValidate>
-                  <fieldset className="rsvp__form-fields" disabled={rsvpStatus === 'submitting'}>
-                    <label className="rsvp__field"><span>Имя и фамилия</span><input type="text" name="name" autoComplete="name" required /></label>
-                    <label className="rsvp__field"><span>Ник в телеграм</span><input type="text" name="telegram" autoComplete="off" placeholder="Например, @tanya" onBlur={handleTelegramBlur} required /></label>
-                    <fieldset className="rsvp__attendance"><legend>Придёте?</legend><label><input type="radio" name="attendance" value="Да" required /><span className="rsvp__radio" />Да</label><label><input type="radio" name="attendance" value="Нет" required /><span className="rsvp__radio" />Нет</label></fieldset>
-                  </fieldset>
-                  <button className="rsvp__submit" type="submit" disabled={rsvpStatus === 'submitting'}>{rsvpStatus === 'submitting' ? 'Отправляем…' : 'Отправить'}</button>
-                  <p className="rsvp__message" aria-live="polite">{rsvpError}</p>
-                </form>
-              )}
-            </div>
-          </section>
-
-          <section className="m-section m-update">
-            <img className="m-full" src={M.updateCircles} alt="" />
-            <p>Дадим знать, <span>когда здесь появится больше полезной информации</span>. Это будет <span>скоро</span>, возвращайтесь!</p>
-          </section>
-
-          <section className="m-section m-goodbye"><img className="m-full" src={M.seeYou} alt="Увидимся!" /></section>
-        </div>
-      </main>
-    );
   }
 
   return (
