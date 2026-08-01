@@ -1,0 +1,25 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_25_1405)">
+<g clip-path="url(#clip1_25_1405)">
+<circle cx="1600.83" cy="346.072" r="64" fill="#FCC3CE"/>
+<circle cx="572" cy="1045" r="64" fill="white"/>
+<circle cx="34" cy="965" r="64" fill="#FD7A00"/>
+<circle cx="1788" cy="181" r="64" fill="white"/>
+<circle cx="98" cy="305" r="64" fill="#FCC3CE"/>
+<circle cx="260" r="64" fill="#FD7A00"/>
+<circle cx="1433" r="64" fill="#FCC3CE"/>
+<circle cx="1017" cy="686" r="64" fill="#FD7A00"/>
+<circle cx="487" cy="626" r="64" fill="#FCC3CE"/>
+<circle cx="1916" cy="837" r="64" fill="#FD7A00"/>
+<circle cx="1493" cy="1108" r="64" fill="#FCC3CE"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_25_1405">
+<rect width="1920" height="1080" fill="white"/>
+</clipPath>
+<clipPath id="clip1_25_1405">
+<rect width="2010" height="1236" fill="white" transform="translate(-30 -64)"/>
+</clipPath>
+</defs>
+</svg>

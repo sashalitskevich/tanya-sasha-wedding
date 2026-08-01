@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1920 1080">
+  <!-- Generator: Adobe Illustrator 30.8.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 72)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #fd7a00;
+      }
+
+      .st2 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st3 {
+        fill: #fcc3ce;
+      }
+
+      .st4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" y="0" width="1920" height="1080"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="st0" y="0" width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g class="st4">
+    <g class="st2">
+      <g>
+        <circle class="st3" cx="563" cy="-31" r="64"/>
+        <circle class="st1" cx="1299" cy="1111" r="64"/>
+        <circle class="st1" cx="21" cy="1080" r="64"/>
+        <circle class="st1" cx="1258" cy="196" r="64"/>
+        <circle class="st3" cx="185" cy="896" r="64"/>
+        <circle class="st3" cx="1889" cy="738" r="64"/>
+        <circle class="st3" cx="861" cy="941" r="64"/>
+        <circle class="st3" cx="1410" cy="18" r="64"/>
+        <circle class="st1" cx="879" cy="896" r="64"/>
+        <circle class="st3" cx="1778" cy="196" r="64"/>
+        <circle class="st1" cx="85" cy="284" r="64"/>
+      </g>
+    </g>
+  </g>
+</svg>

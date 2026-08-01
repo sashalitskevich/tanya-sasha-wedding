@@ -2,12 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-import Main from "./assets/Main.png";
-import Date from "./assets/Date.png";
-import FAQ from "./assets/FAQ.png";
-import RSVP from "./assets/RSVP.png";
-import SeeYou from "./assets/SeeYou.png";
-import Update from "./assets/Update.png";
+import Main from "./assets/Main.webp";
+import MainCircles from "./assets/MainCircles.svg";
+import Date from "./assets/DateCircles.svg";
+import FAQ from "./assets/FAQ.svg";
+import RSVP from "./assets/RSVP.svg";
+import SeeYou from "./assets/SeeYou.svg";
+import Update from "./assets/Update.svg";
 
 const A = {
   mainPhoto: Main,
@@ -17,7 +18,7 @@ const A = {
   dividerWhite: 'https://www.figma.com/api/mcp/asset/88aaf998-9651-4d63-9333-2e6875a08db1',
   dateDots: Date,
   dateDecor: 'https://www.figma.com/api/mcp/asset/a4b28985-ac2e-4ab3-a2bf-5cb9d05173c7',
-  heroCircles: 'https://www.figma.com/api/mcp/asset/bda6f936-8bbe-48ac-b92d-72c912ce9e6c',
+  heroCircles: MainCircles,
   seeYouCircles: SeeYou,
   updateCircles: Update,
 };

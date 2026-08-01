@@ -11,7 +11,7 @@ p, h2, h3 { margin: 0; }
 .shade { position: absolute; inset: 0; background: rgba(0,0,0,.3); }
 .hero { top: 0; height: 1080px; background: #fcc3ce; }
 .hero__photo { position: absolute; inset: 0; width: 1920px; height: 1080px; display: block; object-fit: fill; }
-.hero__circles { position: absolute; left: -30px; top: -64px; width: 2010px; height: 1236px; }
+.hero__circles { position: absolute; left: 0px; top: 0px; width: 1920px; height: 1080px; }
 .hero__text { position: absolute; left: 74px; top: 36px; width: 1802px; height: 993px; overflow: hidden; font-size: 120px; line-height: 98px; letter-spacing: -2.4px; font-weight: 300; white-space: nowrap; }
 .hero__text em { font-style: italic; font-weight: 300; }
 .hero__hello, .hero__marry, .hero__invite { position: absolute; }

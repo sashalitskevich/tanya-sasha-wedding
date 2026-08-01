@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1920 1686">
+  <!-- Generator: Adobe Illustrator 30.8.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 72)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+
+      .st2 {
+        fill: #fcc3ce;
+      }
+
+      .st3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" y="0" width="1920" height="1686"/>
+    </clipPath>
+  </defs>
+  <g class="st3">
+    <g>
+      <circle class="st2" cx="1423" cy="-2" r="64"/>
+      <circle class="st2" cx="31" cy="312.75" r="64"/>
+      <circle class="st1" cx="262" cy="567.75" r="64"/>
+      <circle class="st2" cx="1796" cy="1082" r="64"/>
+      <circle class="st2" cx="114" cy="1372" r="64"/>
+      <circle class="st2" cx="1712" cy="190.75" r="64"/>
+      <circle class="st1" cx="1776" cy="245.75" r="64"/>
+      <circle class="st2" cx="137" cy="1041" r="64"/>
+      <circle class="st2" cx="979" cy="1288" r="64"/>
+      <circle class="st1" cx="1668" cy="1484" r="64"/>
+      <circle class="st1" cx="572" cy="-35.25" r="64"/>
+      <circle class="st1" cx="1129" cy="1717" r="64"/>
+      <circle class="st1" cx="198" cy="1105" r="64"/>
+      <circle class="st2" cx="1569" cy="568" r="64"/>
+    </g>
+  </g>
+</svg>
