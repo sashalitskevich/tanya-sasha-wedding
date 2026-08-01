@@ -187,6 +187,9 @@ p, h2, h3 { margin: 0; }
   font-size: 20px;
   line-height: 24px;
   letter-spacing: -.4px;
+
+  width: 100%;
+  text-align: center;
 }
 .rsvp__message.is-success {
   color: #fbf6f3;

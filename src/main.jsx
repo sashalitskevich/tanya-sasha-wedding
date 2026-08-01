@@ -213,7 +213,7 @@ function App() {
                     <label className="rsvp__field"><span>Имя и фамилия</span><input type="text" name="name" autoComplete="name" required /></label>
                     <label className="rsvp__field"><span>Ник в телеграм</span><input type="text" name="telegram" autoComplete="off" placeholder="Например, @tanya" onBlur={handleTelegramBlur} required /></label>
                     <fieldset className="rsvp__attendance"><legend>Придёте?</legend><label><input type="radio" name="attendance" value="Да" required /><span className="rsvp__radio" />Да</label><label><input type="radio" name="attendance" value="Нет" required /><span className="rsvp__radio" />Нет</label></fieldset>
-                    <label className="rsvp__field rsvp__field--comment"><span>Комментарий</span><textarea name="comment" placeholder="необязательное поле" /></label>
+                    <label className="rsvp__field rsvp__field--comment"><span>Комментарий</span><textarea name="comment" placeholder="Необязательное поле" /></label>
                   </fieldset>
                   <button className="rsvp__submit" type="submit" disabled={rsvpStatus === 'submitting'}>{rsvpStatus === 'submitting' ? 'Отправляем…' : 'Отправить'}</button>
                   <p className="rsvp__message" aria-live="polite">{rsvpError}</p>
@@ -323,7 +323,7 @@ function App() {
 
                   <label className="rsvp__field rsvp__field--comment">
                     <span>Комментарий</span>
-                    <textarea name="comment" placeholder="необязательное поле" />
+                    <textarea name="comment" placeholder="Необязательное поле" />
                   </label>
                 </fieldset>
 
