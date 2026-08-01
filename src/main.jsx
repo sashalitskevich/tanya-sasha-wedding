@@ -7,7 +7,7 @@ import MainCircles from "./assets/MainCircles.svg";
 import Date from "./assets/DateCircles.svg";
 import FAQ from "./assets/FAQ.svg";
 import RSVP from "./assets/RSVP.svg";
-import SeeYou from "./assets/SeeYou.svg";
+import SeeYou from "./assets/SeeYou.png";
 import Update from "./assets/Update.svg";
 
 const A = {
