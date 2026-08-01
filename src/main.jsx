@@ -4,11 +4,19 @@ import './styles.css';
 
 import Main from "./assets/Main.webp";
 import MainCircles from "./assets/MainCircles.svg";
-import Date from "./assets/DateCircles.svg";
+import DateCircles from "./assets/DateCircles.svg";
 import FAQ from "./assets/FAQ.svg";
 import RSVP from "./assets/RSVP.svg";
-import SeeYou from "./assets/SeeYou.png";
+import SeeYou from "./assets/SeeYou.svg";
 import Update from "./assets/Update.svg";
+
+import MainMobile from "./assets/MainMobile.webp";
+import MainCirclesMobile from "./assets/MainCirclesMobile.svg";
+import DateCirclesMobile from "./assets/DateCirclesMobile.svg";
+import FAQMobile from "./assets/FAQMobile.svg";
+import RSVPMobile from "./assets/RSVPMobile.svg";
+import SeeYouMobile from "./assets/SeeYouMobile.svg";
+import UpdateMobile from "./assets/UpdateMobile.svg";
 
 const A = {
   mainPhoto: Main,
@@ -16,8 +24,7 @@ const A = {
   dividerPink: 'https://www.figma.com/api/mcp/asset/c1e2cfb3-7d52-43df-8d88-43b32416654b',
   faqCircles: FAQ,
   dividerWhite: 'https://www.figma.com/api/mcp/asset/88aaf998-9651-4d63-9333-2e6875a08db1',
-  dateDots: Date,
-  dateDecor: 'https://www.figma.com/api/mcp/asset/a4b28985-ac2e-4ab3-a2bf-5cb9d05173c7',
+  dateDots: DateCircles,
   heroCircles: MainCircles,
   seeYouCircles: SeeYou,
   updateCircles: Update,
@@ -25,14 +32,14 @@ const A = {
 
 
 const M = {
-  photo: 'https://www.figma.com/api/mcp/asset/c11f7704-71bb-48ff-bd92-b06bb9483440',
-  heroCircles: 'https://www.figma.com/api/mcp/asset/57d8899c-2e75-4191-ad23-a5d7a17ac585',
-  dateCircles: 'https://www.figma.com/api/mcp/asset/93bd65bc-90d6-4b4c-95b2-dd05c818c8fa',
-  faqCircles: 'https://www.figma.com/api/mcp/asset/c708353d-152b-47eb-8719-e14005ab3b9c',
+  photo: MainMobile,
+  heroCircles: MainCirclesMobile,
+  dateCircles: DateCirclesMobile,
+  faqCircles: FAQMobile,
   divider: 'https://www.figma.com/api/mcp/asset/3971656d-96fb-42b4-805f-4c2f91021c12',
-  rsvpCircles: 'https://www.figma.com/api/mcp/asset/daf8fda2-4a82-4138-ae11-f31089baf609',
-  seeYou: 'https://www.figma.com/api/mcp/asset/3a9c81f3-a5cb-43cb-9758-3847edf9d935',
-  updateCircles: 'https://www.figma.com/api/mcp/asset/df833fd2-893c-44f9-8b86-a92f2c775ae2',
+  rsvpCircles: RSVPMobile,
+  seeYou: SeeYouMobile,
+  updateCircles: UpdateMobile,
 };
 
 
@@ -233,7 +240,7 @@ function App() {
   }
 
   return (
-    <main className="viewport" ref={host} style={{ height: 7158 * scale }}>
+    <main className="viewport" ref={host} style={{ height: 7086 * scale }}>
       <div className="canvas" style={{ transform: `scale(${scale})` }}>
         <section className="section hero" aria-label="Приглашение">
           <img className="hero__photo" src={A.mainPhoto} alt="Саша и Таня" />
@@ -252,7 +259,6 @@ function App() {
           <img className="date__dots" src={A.dateDots} alt="" />
           <div className="date__when">Ждём всех<br /><span>     24 октября 2026</span><br /><span>      в 15:00</span></div>
           <div className="date__where">в <span>Белграде</span>, Сербия</div>
-          <img className="date__decor" src={A.dateDecor} alt="" />
         </section>
 
         <section className="section faq">
