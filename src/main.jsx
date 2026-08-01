@@ -2,29 +2,33 @@ import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-import PhotoDesk from "./assets/Photo-Desk.webp";
-import PhotoMobile from "./assets/Photo-Mobile.webp";
+import Main from "./assets/Main.png";
+import Date from "./assets/Date.png";
+import FAQ from "./assets/FAQ.png";
+import RSVP from "./assets/RSVP.png";
+import SeeYou from "./assets/SeeYou.png";
+import Update from "./assets/Update.png";
 
 const A = {
-  mainPhoto: PhotoDesk,
-  rsvpCircles: 'https://www.figma.com/api/mcp/asset/7b55d2e3-32a9-4dc7-95d1-4ab8fe152a7a',
+  mainPhoto: Main,
+  rsvpCircles: RSVP,
   dividerPink: 'https://www.figma.com/api/mcp/asset/c1e2cfb3-7d52-43df-8d88-43b32416654b',
-  faqCircles: 'https://www.figma.com/api/mcp/asset/37e340dd-f6fe-4d76-a9b5-57ea4ddb9d88',
-  dividerWhite: 'https://www.figma.com/api/mcp/asset/60795981-3770-45b4-95ea-ed24550188e6',
-  dateDots: 'https://www.figma.com/api/mcp/asset/5259e64b-deb3-45eb-a88e-38e06ec6256f',
+  faqCircles: FAQ,
+  dividerWhite: 'https://www.figma.com/api/mcp/asset/88aaf998-9651-4d63-9333-2e6875a08db1',
+  dateDots: Date,
   dateDecor: 'https://www.figma.com/api/mcp/asset/a4b28985-ac2e-4ab3-a2bf-5cb9d05173c7',
   heroCircles: 'https://www.figma.com/api/mcp/asset/bda6f936-8bbe-48ac-b92d-72c912ce9e6c',
-  seeYouCircles: 'https://www.figma.com/api/mcp/asset/2f799048-818f-4aeb-907c-6a78b093f229',
-  updateCircles: 'https://www.figma.com/api/mcp/asset/acfd39e1-0ea8-44d4-9daa-2eae48534ff0',
+  seeYouCircles: SeeYou,
+  updateCircles: Update,
 };
 
 
 const M = {
-  photo: PhotoMobile,
+  photo: 'https://www.figma.com/api/mcp/asset/c11f7704-71bb-48ff-bd92-b06bb9483440',
   heroCircles: 'https://www.figma.com/api/mcp/asset/57d8899c-2e75-4191-ad23-a5d7a17ac585',
   dateCircles: 'https://www.figma.com/api/mcp/asset/93bd65bc-90d6-4b4c-95b2-dd05c818c8fa',
-  faqCircles: 'https://www.figma.com/api/mcp/asset/275b620c-d619-44d5-a651-0414803aa1cc',
-  divider: 'https://www.figma.com/api/mcp/asset/ac5093bf-47c7-440a-a9a4-b54b50159191',
+  faqCircles: 'https://www.figma.com/api/mcp/asset/c708353d-152b-47eb-8719-e14005ab3b9c',
+  divider: 'https://www.figma.com/api/mcp/asset/3971656d-96fb-42b4-805f-4c2f91021c12',
   rsvpCircles: 'https://www.figma.com/api/mcp/asset/daf8fda2-4a82-4138-ae11-f31089baf609',
   seeYou: 'https://www.figma.com/api/mcp/asset/3a9c81f3-a5cb-43cb-9758-3847edf9d935',
   updateCircles: 'https://www.figma.com/api/mcp/asset/df833fd2-893c-44f9-8b86-a92f2c775ae2',
@@ -40,10 +44,12 @@ const RSVP_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyLgxGn-U4pD0E0J3
 
 const faq = [
   ['Где пройдёт свадьба?', 'Мы выбрали место за городом, недалеко от Белграда. Организуем трансфер из центра города до места и обратно.'],
-  ['Будет ли дресс-код?', 'Да, без строгих правил, но мы бы хотели попросить вас одеться в тёплой гамме, чтобы поддержать общее оформление площадки и красиво сочетаться друг с другом на фото. Погода может нас порадовать, а может и подставить. Так что подготовьте что-то тёплое и защищающее от дождя, в чём вы будете чувствовать себя также празднично и неотразимо.'],
+  ['Будет ли дресс-код?', 'Да, без строгих правил, но мы бы хотели попросить вас одеться в тёплой гамме, чтобы поддержать общее оформление площадки и красиво сочетаться друг с другом на фото. Погода может нас порадовать, а может и подставить. Так что подготовьте что-то тёплое и защищающее от дождя, в чём вы будете чувствовать себя также празднично и неотразимо.\n\nИ пожалуйста, не выбирайте наряды белого или молочного цвета — эти цвета зарезервированы невестой)'],
   ['Как добраться до места?', 'Мы организуем трансфер из центра Белграда до ранчо. А вечером с комфортом вернём вас обратно. Если вам не хочется не зависеть от трансфера, без проблем можно приехать на своей машине. На месте будет удобная парковка.'],
-  ['Нужно ли подтверждать присутствие?', 'Да, так мы точнее сможем рассчитать количество посадочных мест, еды и напитков, чтобы всем всего хватило. Пожалуйста, отметьте своё решение в форме ниже не позже чем за 1,5 месяца до события.'],
-  ['А если остались вопросы?', 'Срочные вопросы пишите нам в телеграм. А ближе к мероприятию мы сделаем чат с нашим свадебным организатором, Аней. Она поможет ответить на все оставшиеся.'],
+  ['Нужно ли подтверждать присутствие?', 'Да, так мы точнее сможем рассчитать количество посадочных мест, еды и напитков, чтобы всем всего хватило. Пожалуйста, отметьте своё решение в форме ниже не позже 1 сентября.'],
+  ['Можно ли с детьми?', 'Конечно! Мы позовём на праздник аниматора, который сможет присмотреть за нашими маленькими гостями, чтобы у вас была возможность немного отвлечься. Также можно будет уложить малышей отдохнуть в отдельном домике, если это понадобится, но нам нужно знать об этой необходимости заранее. Пожалуйста, укажите в комментарии, планируете ли быть с детьми и понадобится ли такая опция.'],
+  ['Что нам подарить?', 'Мы не собирали вишлист, если захотите нас поздравить, то можете вложиться в наше свадебное путешествие динарами и евро. Цветочное оформление праздника уже продумано, так что не покупайте букеты. Главное — приходите, ведь самый лучший подарок для нас — это вы.'],
+  ['А если остались вопросы?', 'Срочные вопросы пишите нам в телеграм. Если у вас есть организационные вопросы или вы готовите для нас сюрприз, можете написать нашему свадебному организатору Ане @annioki. А ближе к мероприятию мы сделаем совместный чат.'],
 ];
 
 
@@ -112,6 +118,7 @@ function App() {
       name: String(formData.get('name') || '').trim(),
       telegram: normalizeTelegram(formData.get('telegram')),
       attendance: String(formData.get('attendance') || '').trim(),
+      comment: String(formData.get('comment') || '').trim(),
     };
 
     if (!payload.name || !payload.telegram || !['Да', 'Нет'].includes(payload.attendance)) {
@@ -146,7 +153,7 @@ function App() {
 
   if (isMobile) {
     return (
-      <main className="viewport" ref={host} style={{ height: 11740 * scale }}>
+      <main className="viewport" ref={host} style={{ height: 12859 * scale }}>
         <div className="mobile-canvas" style={{ transform: `scale(${scale})` }}>
           <section className="m-section m-hero">
             <img className="m-photo" src={M.photo} alt="Саша и Таня" />
@@ -178,14 +185,13 @@ function App() {
                   <p>{typography(a)}</p>
                 </article>
               ))}
-              <img src={M.divider} alt="" className="m-faq__last" />
-            </div>
+              </div>
           </section>
 
           <section className="m-section m-rsvp">
             <img className="m-full" src={M.rsvpCircles} alt="" />
             <h2>Вы скажете<br />     нам <b>да</b>?</h2>
-            <p className="m-rsvp__description">{typography('Заполните, пожалуйста, форму, чтобы мы понимали, сколько нам ожидать гостей.')}<br />{typography('Оставьте свой ник в tg, чтобы потом мы собрали всех в одну группу.')}</p>
+            <p className="m-rsvp__description">{typography('Заполните, пожалуйста, форму, чтобы мы понимали, сколько нам ожидать гостей.')}<br />{typography('Оставьте свой ник в телеграм, чтобы потом мы собрали всех в одну группу.')}</p>
             <div className="m-rsvp__form-shell">
               {rsvpStatus === 'success' ? (
                 <div className="rsvp__success" aria-live="polite">
@@ -199,6 +205,7 @@ function App() {
                     <label className="rsvp__field"><span>Имя и фамилия</span><input type="text" name="name" autoComplete="name" required /></label>
                     <label className="rsvp__field"><span>Ник в телеграм</span><input type="text" name="telegram" autoComplete="off" placeholder="Например, @tanya" onBlur={handleTelegramBlur} required /></label>
                     <fieldset className="rsvp__attendance"><legend>Придёте?</legend><label><input type="radio" name="attendance" value="Да" required /><span className="rsvp__radio" />Да</label><label><input type="radio" name="attendance" value="Нет" required /><span className="rsvp__radio" />Нет</label></fieldset>
+                    <label className="rsvp__field rsvp__field--comment"><span>Комментарий</span><textarea name="comment" placeholder="необязательное поле" /></label>
                   </fieldset>
                   <button className="rsvp__submit" type="submit" disabled={rsvpStatus === 'submitting'}>{rsvpStatus === 'submitting' ? 'Отправляем…' : 'Отправить'}</button>
                   <p className="rsvp__message" aria-live="polite">{rsvpError}</p>
@@ -225,7 +232,7 @@ function App() {
   }
 
   return (
-    <main className="viewport" ref={host} style={{ height: 6616 * scale }}>
+    <main className="viewport" ref={host} style={{ height: 7158 * scale }}>
       <div className="canvas" style={{ transform: `scale(${scale})` }}>
         <section className="section hero" aria-label="Приглашение">
           <img className="hero__photo" src={A.mainPhoto} alt="Саша и Таня" />
@@ -249,6 +256,7 @@ function App() {
 
         <section className="section faq">
           <img className="faq__circles" src={A.faqCircles} alt="" />
+          <span className="faq__extra-dot" aria-hidden="true" />
           <h2 className="faq__title">FAQ</h2>
           <div className="faq__list">
             {faq.map(([q,a]) => (
@@ -258,7 +266,6 @@ function App() {
                 <p>{typography(a)}</p>
               </article>
             ))}
-            <img src={A.dividerWhite} alt="" className="faq__line faq__line--last" />
           </div>
         </section>
 
@@ -275,7 +282,7 @@ function App() {
               <span className="rsvp__second-indent">&nbsp;&nbsp;&nbsp;&nbsp;</span>нам <b>да</b>?
             </span>
           </h2>
-          <p className="rsvp__description">{typography('Заполните, пожалуйста, форму, чтобы мы понимали,')}<br />{typography('сколько нам ожидать гостей. Оставьте свой ник в tg,')}<br />{typography('чтобы потом мы собрали всех в одну группу.')}</p>
+          <p className="rsvp__description">{typography('Заполните, пожалуйста, форму, чтобы мы понимали,')}<br />{typography('сколько нам ожидать гостей. Оставьте свой ник в телеграм, чтобы потом мы собрали всех в одну группу.')}</p>
 
           <div className="rsvp__form-shell">
             {rsvpStatus === 'success' ? (
@@ -306,6 +313,11 @@ function App() {
                     <label><input type="radio" name="attendance" value="Да" required /><span className="rsvp__radio" />Да</label>
                     <label><input type="radio" name="attendance" value="Нет" required /><span className="rsvp__radio" />Нет</label>
                   </fieldset>
+
+                  <label className="rsvp__field rsvp__field--comment">
+                    <span>Комментарий</span>
+                    <textarea name="comment" placeholder="необязательное поле" />
+                  </label>
                 </fieldset>
 
                 <button className="rsvp__submit" type="submit" disabled={rsvpStatus === 'submitting'}>
