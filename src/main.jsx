@@ -2,8 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
+import PhotoDesk from "./assets/Photo-Desk.webp";
+import PhotoMobile from "./assets/Photo-Mobile.webp";
+
 const A = {
-  mainPhoto: 'https://www.figma.com/api/mcp/asset/6ca958a0-a5a0-4005-b7d0-ba6a8c51c1fa',
+  mainPhoto: PhotoDesk,
   rsvpCircles: 'https://www.figma.com/api/mcp/asset/7b55d2e3-32a9-4dc7-95d1-4ab8fe152a7a',
   dividerPink: 'https://www.figma.com/api/mcp/asset/c1e2cfb3-7d52-43df-8d88-43b32416654b',
   faqCircles: 'https://www.figma.com/api/mcp/asset/37e340dd-f6fe-4d76-a9b5-57ea4ddb9d88',
@@ -17,7 +20,7 @@ const A = {
 
 
 const M = {
-  photo: 'https://www.figma.com/api/mcp/asset/c11f7704-71bb-48ff-bd92-b06bb9483440',
+  photo: PhotoMobile,
   heroCircles: 'https://www.figma.com/api/mcp/asset/57d8899c-2e75-4191-ad23-a5d7a17ac585',
   dateCircles: 'https://www.figma.com/api/mcp/asset/93bd65bc-90d6-4b4c-95b2-dd05c818c8fa',
   faqCircles: 'https://www.figma.com/api/mcp/asset/275b620c-d619-44d5-a651-0414803aa1cc',
