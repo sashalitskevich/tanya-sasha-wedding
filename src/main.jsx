@@ -22,7 +22,7 @@ const M = {
   dateCircles: 'https://www.figma.com/api/mcp/asset/93bd65bc-90d6-4b4c-95b2-dd05c818c8fa',
   faqCircles: 'https://www.figma.com/api/mcp/asset/275b620c-d619-44d5-a651-0414803aa1cc',
   divider: 'https://www.figma.com/api/mcp/asset/ac5093bf-47c7-440a-a9a4-b54b50159191',
-  rsvpCircles: 'https://www.figma.com/api/mcp/asset/20865bda-924c-4444-9fff-00ce3b75c9cd',
+  rsvpCircles: 'https://www.figma.com/api/mcp/asset/daf8fda2-4a82-4138-ae11-f31089baf609',
   seeYou: 'https://www.figma.com/api/mcp/asset/3a9c81f3-a5cb-43cb-9758-3847edf9d935',
   updateCircles: 'https://www.figma.com/api/mcp/asset/df833fd2-893c-44f9-8b86-a92f2c775ae2',
 };
@@ -152,7 +152,7 @@ function App() {
             <div className="m-hero__text">
               <div className="m-hero__hello">Привет,<br /><span>   друзья!</span></div>
               <div className="m-hero__marry"><span>    <em>Мы</em></span><br /><em>женимся!</em></div>
-              <div className="m-hero__invite">И зовём <em>вас<br />            это</em><br /><em> отпраздновать</em></div>
+              <div className="m-hero__invite">   И зовём<br />        <em>вас это</em><br /><em>отпраздновать</em></div>
             </div>
           </section>
 
@@ -181,7 +181,7 @@ function App() {
 
           <section className="m-section m-rsvp">
             <img className="m-full" src={M.rsvpCircles} alt="" />
-            <h2>Вы скажете<br />нам <b>да</b>?</h2>
+            <h2>Вы скажете<br />     нам <b>да</b>?</h2>
             <p className="m-rsvp__description">{typography('Заполните, пожалуйста, форму, чтобы мы понимали, сколько нам ожидать гостей.')}<br />{typography('Оставьте свой ник в tg, чтобы потом мы собрали всех в одну группу.')}</p>
             <div className="m-rsvp__form-shell">
               {rsvpStatus === 'success' ? (
